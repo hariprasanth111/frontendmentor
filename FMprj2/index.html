@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 7.5px;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        background: #ff664800;
+        width: 100%;
+        color: rgb(32, 141, 145);
+      }
+      .attribution a {
+        color: hsl(78, 71%, 48%);
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- main page -->
+    <div class="newsletter-container">
+      <div class="newsletter-left">
+        <div class="heading1">
+          <h1>Stay updated!</h1>
+        </div>
+        <div class="para">
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        </div>
+        <ul class="list">
+          <li class="items">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height=""
+              viewBox="0 0 64 64"
+            >
+              <defs>
+                <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+                  <stop offset="0%" stop-color="#FF6A3A" />
+                  <stop offset="100%" stop-color="#FF527B" />
+                </linearGradient>
+              </defs>
+              <g fill="none">
+                <circle cx="32" cy="32" r="32" fill="url(#a)" />
+                <path
+                  stroke="#FFF"
+                  stroke-width="4"
+                  d="m18.286 34.686 8.334 7.98 19.094-18.285"
+                />
+              </g></svg
+            >Product discovery and building what matters
+          </li>
+          <li class="items">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height=""
+              viewBox="0 0 64 64"
+            >
+              <defs>
+                <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+                  <stop offset="0%" stop-color="#FF6A3A" />
+                  <stop offset="100%" stop-color="#FF527B" />
+                </linearGradient>
+              </defs>
+              <g fill="none">
+                <circle cx="32" cy="32" r="32" fill="url(#a)" />
+                <path
+                  stroke="#FFF"
+                  stroke-width="4"
+                  d="m18.286 34.686 8.334 7.98 19.094-18.285"
+                />
+              </g></svg
+            >Measuring to ensure updates are a success
+          </li>
+          <li class="items">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height=""
+              viewBox="0 0 64 64"
+            >
+              <defs>
+                <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+                  <stop offset="0%" stop-color="#FF6A3A" />
+                  <stop offset="100%" stop-color="#FF527B" />
+                </linearGradient>
+              </defs>
+              <g fill="none">
+                <circle cx="32" cy="32" r="32" fill="url(#a)" />
+                <path
+                  stroke="#FFF"
+                  stroke-width="4"
+                  d="m18.286 34.686 8.334 7.98 19.094-18.285"
+                />
+              </g></svg
+            >And much more!
+          </li>
+        </ul>
+
+        <form action="" id="submit-btn">
+          <div class="email">
+            <label for="mail" class="email-h"
+              >Email address
+              <span class="msg">Valid email required!</span></label
+            >
+
+            <input
+              type="text"
+              autocomplete="email"
+              class="input"
+              placeholder="email@gamil.com"
+              name="email"
+              id="mail"
+            />
+          </div>
+
+          <div class="btn-subscribe">
+            <button type="submit" class="hover btn">
+              Subscribe to monthly newsletter
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="newsletter-right">
+        <div class="image">
+          <img
+            src="./assets/images/illustration-sign-up-desktop.svg"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="image-mobi">
+          <img
+            src=".//assets/images/illustration-sign-up-mobile.svg"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- success page -->
+    <div class="success-container">
+      <div class="succ-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="5"
+          height="5"
+          viewBox="0 0 21 21"
+        >
+          <g fill="none">
+            <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+            <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+          </g>
+        </svg>
+      </div>
+
+      <div class="succ-heading">
+        <h1>Thanks for subscribing!</h1>
+      </div>
+      <div class="succ-para">
+        <p>
+          A confirmation email has been sent to
+          <span class="dynamic-mail"></span> Please open it and click the button
+          inside to confirm your subscription.
+        </p>
+      </div>
+      <button type="button" id="dismiss-btn" class="hover succ-btn">
+        Dismiss message
+      </button>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Hari Prasanth</a>.
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

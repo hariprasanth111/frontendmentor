@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: myFont;
+  src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+@font-face {
+  font-family: myFont-reg;
+  src: url(./assets/fonts/Poppins-ExtraBold.ttf);
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  height: 100vh;
+  background: #7a7575;
+}
+
+.container {
+  width: 600px;
+  height: 450px;
+  border-radius: 20px 20px 7rem 20px;
+  background: white;
+}
+
+.input-field {
+  justify-content: space-around;
+  width: 80%;
+  align-items: end;
+  height: 110px;
+}
+
+.input-field input {
+  width: 100px;
+  height: 50px;
+  padding: 0.7rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgba(128, 128, 128, 0.253);
+}
+
+.input-field input::placeholder {
+  font-family: myFont-reg;
+  font-weight: bold;
+  transform: translateY(4px);
+  font-size: 25px;
+}
+
+.input-field input:focus {
+  border-color: hsl(259, 100%, 65%);
+}
+
+.input-field label {
+  display: block;
+  color: grey;
+  font-family: myFont-reg;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-bottom: 0.1rem;
+}
+
+.icon svg {
+  background: hsl(259, 100%, 65%);
+  border-radius: 50%;
+  padding: 1rem;
+  transition: all 300ms;
+  width: 65px;
+  height: 65px;
+  transform: translateX(-40px);
+}
+
+.icon svg:hover {
+  background: hsl(259, 91%, 30%);
+}
+
+.icon {
+  justify-content: flex-end;
+}
+
+.output {
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+.output span {
+  color: hsl(259, 100%, 65%);
+  margin-right: 0.3rem;
+}
+
+.line {
+  transform: translateY(33px);
+  opacity: 0.3;
+}
+
+.output h1 {
+  font-size: 65px;
+  margin-left: 2rem;
+  margin-bottom: -1.5rem;
+  font-weight: 900;
+  font-family: myFont, sans-serif;
+}
+
+@media only screen and (max-width: 605px) {
+  .container {
+    width: 500px;
+    height: 400px;
+    margin: 0 2rem;
+  }
+
+  .input-field input {
+    width: 85px;
+    height: 45px;
+  }
+
+  .input-field label {
+    font-size: 9px;
+  }
+
+  .icon svg {
+    width: 55px;
+    height: 55px;
+  }
+
+  .input-field input::placeholder {
+    font-size: 20px;
+  }
+
+  .output {
+    height: 230px;
+  }
+
+  .output h1 {
+    font-size: 55px;
+    margin-bottom: -0.6rem;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .container {
+    width: 350px;
+    height: 400px;
+    margin: 0 2rem;
+  }
+
+  .input-field {
+    padding-top: 1rem;
+    width: 350px;
+    align-items: center;
+  }
+
+  .icon {
+    justify-content: center;
+  }
+
+  .icon svg {
+    width: 50px;
+    height: 50px;
+    transform: translateX(0);
+  }
+
+  .input-field input::placeholder {
+    font-family: myFont-reg;
+    font-weight: bold;
+    transform: translateY(4px);
+    font-size: 20px;
+  }
+
+  .output h1 {
+    font-size: 50px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .container {
+    width: 300px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .input-field input {
+    width: 70px;
+    height: 40px;
+    margin-left: 1rem;
+  }
+  .day-field,
+  .month-field,
+  .year-field {
+    margin-right: 0.9rem;
+  }
+  .input-field label {
+    font-size: 8.7px;
+    margin-left: 1rem;
+  }
+
+  .input-field input::placeholder {
+    font-size: 15px;
+  }
+
+  .line {
+    transform: translateY(40px);
+  }
+
+  .input-field {
+    width: 300px;
+  }
+
+  .msg {
+    text-align: center;
+    transform: translateX(10px);
+    font-size: 7px;
+  }
+
+  .output {
+    justify-content: end;
+    height: 180px;
+  }
+  .output h1 {
+    font-size: 42px;
+  }
+}
+
+/* error msgzz */
+
+.day-field,
+.month-field,
+.year-field {
+  position: relative;
+}
+
+.border-red {
+  border-color: red !important;
+}
+
+.msg {
+  display: block;
+  margin-top: 0.3rem;
+  width: 100%;
+  font-size: 8px;
+  color: red;
+  font-family: sans-serif;
+  font-weight: 200;
+  position: absolute;
+  bottom: -13px;
+}
+
+.label {
+  color: rgba(255, 0, 0, 0.877) !important;
+}
+
+.none {
+  display: none;
+}
